@@ -5,27 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COLORS - 車バイク業界20年の整備士が営む販売店</title>
     <style>
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; text-align: center; color: #333; line-height: 1.6; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; text-align: center; color: #333; line-height: 1.6; background-color: #f4f4f4; }
         header { background: #000; color: #fff; padding: 60px 0; }
-        .container { width: 90%; max-width: 800px; margin: auto; padding: 20px; }
+        .container { width: 95%; max-width: 800px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
         .btn-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0; }
-        .btn { padding: 15px 25px; text-decoration: none; color: #fff; border-radius: 5px; font-weight: bold; flex: 1; min-width: 150px; transition: 0.3s; }
+        .btn { padding: 15px 25px; text-decoration: none; color: #fff; border-radius: 5px; font-weight: bold; flex: 1; min-width: 140px; transition: 0.3s; font-size: 0.9rem; }
         .btn:hover { opacity: 0.8; transform: translateY(-2px); }
         
-        /* 各サイトのブランドカラー */
-        .btn-carsensor { background: #ff6600; } /* カーセンサー橙 */
-        .btn-goobike { background: #0055aa; }   /* グーバイク青 */
-        .btn-bikesensor { background: #000000; border: 1px solid #fff; } /* バイクセンサー黒 */
-        .btn-youtube { background: #ff0000; }     /* YouTube赤 */
-        .btn-yahoo { background: #ff0000; border: 2px solid #fff; } /* ヤフオク赤（枠付き） */
+        .btn-carsensor { background: #ff6600; }
+        .btn-goobike { background: #0055aa; }
+        .btn-bikesensor { background: #000; border: 1px solid #666; }
+        .btn-youtube { background: #ff0000; }
+        .btn-yahoo { background: #ffcc00; color: #000; } /* ヤフオクは黄色系 */
         
-        .btn-assessment { background: #28a745; display: block; margin: 30px auto; width: 80%; font-size: 1.2rem; }
-        
-        .insta-placeholder { width: 100%; height: 300px; background: #f4f4f4; border: 1px dashed #ccc; display: flex; align-items: center; justify-content: center; margin: 20px 0; }
-        
+        /* フォームのスタイル */
+        .form-section { text-align: left; background: #f9f9f9; padding: 20px; border-radius: 8px; margin-top: 30px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; font-size: 0.9rem; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1rem; }
+        .submit-btn { background: #28a745; color: #fff; border: none; padding: 15px; width: 100%; border-radius: 5px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .submit-btn:hover { background: #218838; }
+
+        .insta-placeholder { width: 100%; height: 200px; background: #eee; border: 1px dashed #ccc; display: flex; align-items: center; justify-content: center; margin: 20px 0; }
         hr { border: 0; border-top: 1px solid #eee; margin: 40px 0; }
-        footer { font-size: 0.8rem; color: #777; padding: 40px; background: #f9f9f9; }
-        .shop-info { margin-bottom: 30px; font-size: 0.9rem; }
+        footer { font-size: 0.8rem; color: #777; padding: 40px; }
     </style>
 </head>
 <body>
@@ -44,31 +47,79 @@
 
     <hr>
 
-    <h3>📷 Instagram (Daily Work)</h3>
-    <div class="insta-placeholder">
-        <p>Instagram連携準備中...<br>（店長の作業風景をここからチェック！）</p>
-    </div>
-
-    <hr>
-
     <h3>🛒 在庫車両・動画をチェック</h3>
-    <p>最新の在庫状況や、整備の様子を動画で公開中！</p>
-    
     <div class="btn-group">
-        <a href="https://www.youtube.com/@%E3%82%AC%E3%83%AC%E3%83%BC%E3%82%B8%E5%8D%81%E8%89%B2" target="_blank" class="btn btn-youtube">YouTube チャンネル</a>
+        <a href="https://www.youtube.com/@%E3%82%AC%E3%83%AC%E3%83%BC%E3%82%B8%E5%8D%81%E8%89%B2" target="_blank" class="btn btn-youtube">YouTube</a>
         <a href="https://www.carsensor.net/shop/saitama/330303001/stocklist/" target="_blank" class="btn btn-carsensor">カーセンサー</a>
         <a href="https://www.goobike.com/shop/client_8540007/zaiko.html" target="_blank" class="btn btn-goobike">GooBike</a>
         <a href="https://www.bds-bikesensor.net/bike?shopCode=53427" target="_blank" class="btn btn-bikesensor">バイクセンサー</a>
-        <a href="#" target="_blank" class="btn btn-yahoo">ヤフオク出品一覧</a>
+        <a href="https://auctions.yahoo.co.jp/seller/23sGncMA3TvnWeFnJSYMuukXEJKi2?user_type=c" target="_blank" class="btn btn-yahoo">ヤフオク</a>
     </div>
 
     <hr>
 
-    <h3>💰 車・バイクの無料査定</h3>
-    <p>売却をお考えの方、業界20年のプロが正当に評価します。<br>お気軽に以下のボタンからメールをお送りください。</p>
-    <a href="mailto:ここに店長のGmailアドレス@gmail.com?subject=【査定依頼】&body=お名前：%0D%0Aお電話番号：%0D%0A車種：%0D%0A年式・走行距離： %0D%0Aメッセージ：" class="btn btn-assessment">
-        📩 査定依頼メールを送る
-    </a>
+    <h3>📷 Instagram</h3>
+    <div class="insta-placeholder">
+        <p>Instagram連携準備中...</p>
+    </div>
+
+    <hr>
+
+    <div class="form-section">
+        <h3 style="text-align: center;">💰 無料査定のご依頼</h3>
+        <p style="font-size: 0.8rem; text-align: center;">必要事項を入力して送信してください。プロが査定いたします！</p>
+        
+        <form action="https://formsubmit.co/bike-dealer-colors@ruby.plala.or.jp" method="POST">
+            <input type="hidden" name="_next" value="https://bike-dealer-colors.github.io/COLORS-OFFICIAL/">
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="form-group">
+                <label>お名前</label>
+                <input type="text" name="お名前" required>
+            </div>
+            <div class="form-group">
+                <label>お電話番号</label>
+                <input type="tel" name="電話番号" required>
+            </div>
+            <div class="form-group">
+                <label>メールアドレス</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label>区分</label>
+                <select name="区分">
+                    <option value="バイク">バイク</option>
+                    <option value="車">車</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>車種</label>
+                <input type="text" name="車種" placeholder="例：ホンダ CB400SF" required>
+            </div>
+            <div class="form-group">
+                <label>グレード</label>
+                <input type="text" name="グレード">
+            </div>
+            <div class="form-group">
+                <div style="display: flex; gap: 10px;">
+                    <div style="flex: 1;">
+                        <label>年式</label>
+                        <input type="text" name="年式" placeholder="例：2015年">
+                    </div>
+                    <div style="flex: 1;">
+                        <label>走行距離</label>
+                        <input type="text" name="走行距離" placeholder="例：15,000km">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>車両状態（100文字程度）</label>
+                <textarea name="車両状態" rows="4" placeholder="外装の状態やカスタム箇所など"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">この内容で査定依頼を送る</button>
+        </form>
+    </div>
 
 </div>
 
