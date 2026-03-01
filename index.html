@@ -16,7 +16,7 @@
 
         /* インスタ・スクロール窓 */
         .insta-window { width: 100%; height: 450px; overflow-y: scroll; border: 1px solid #ddd; border-radius: 8px; background: #fafafa; padding: 10px; box-sizing: border-box; }
-        .insta-content { min-height: 800px; padding: 20px; color: #666; } /* 実際はここに埋め込みコードが入る */
+        .insta-content { min-height: 800px; padding: 20px; color: #666; }
 
         /* リンクボタンのスタイル */
         .btn-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0; }
@@ -33,8 +33,9 @@
         .form-section { text-align: left; background: #f9f9f9; padding: 25px; border-radius: 8px; margin-top: 40px; border: 1px solid #eee; }
         .form-group { margin-bottom: 15px; }
         .form-group label { display: block; font-weight: bold; margin-bottom: 5px; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-        .submit-btn { background: #28a745; color: #fff; border: none; padding: 18px; width: 100%; border-radius: 5px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1rem; }
+        .submit-btn { background: #28a745; color: #fff; border: none; padding: 18px; width: 100%; border-radius: 5px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: 0.3s; margin-top: 10px; }
+        .submit-btn:hover { background: #218838; }
 
         /* アクセスセクション */
         .access-section { text-align: left; background: #333; color: #fff; padding: 30px; border-radius: 8px; margin-top: 40px; }
@@ -54,10 +55,10 @@
 
 <div class="container">
     <div class="shop-info">
-        <h2>技術と提案力で、理想のカーライフを。</h2>
-        <p>車・バイク業界で20年のキャリアを積み、シトロエンのエキスパート技師としても腕を磨いてきた店主が営む、埼玉県美里町の販売店「COLORS」です。</p>
-        <p>当店の強みは、プロの整備士としての「確かな技術力」だけではありません。お客様一人ひとりのライフスタイルやこだわり、将来のビジョンまでを汲み取り、最適な一台をご提案する「接客力」こそがCOLORSの真髄です。</p>
-        <p>「自分に合う車がわからない」「こだわりを形にしたい」という方も、ぜひ一度ご相談ください。20年の経験を活かした独自の視点で、あなたにとって最高のパートナーとなる車両をお届けします。</p>
+        <h2>20年の技術と、あなたに寄り添う提案力を。</h2>
+        <p>埼玉県美里町で車・バイクの販売を行っている「COLORS」です。車・バイク業界で20年のキャリアを積んできた熟練の整備士が、一台一台に魂を込めて向き合っています。</p>
+        <p>当店の自慢は、確かな「整備技術」だけではありません。お客様一人ひとりのライフスタイルやご予算に合わせて、最適な一台を提案する「接客・提案力」こそが私たちの強みです。</p>
+        <p>「どんな車が自分に合うかわからない」「こだわりのバイクを探している」といった悩みにも、プロの視点から柔軟にお応えします。20年の経験に裏打ちされた安心感と、大手にはない親身なサポートで、最高のカーライフ・バイクライフをお手伝いします。</p>
     </div>
 
     <hr>
@@ -123,7 +124,7 @@
             </div>
             <div class="form-group">
                 <label>お問い合わせ内容（100文字程度）</label>
-                <textarea name="車両状態・お問い合わせ内容" rows="4" placeholder="外装の状態や、具体的な相談内容をご入力ください"></textarea>
+                <textarea name="内容" rows="4" placeholder="外装の状態や、具体的な相談内容をご入力ください"></textarea>
             </div>
             
             <button type="submit" class="submit-btn">この内容で送信する</button>
@@ -133,7 +134,7 @@
     <div class="access-section">
         <h3>📍 Access & Contact</h3>
         <p><strong>住所：</strong> 埼玉県児玉郡美里町小茂田８９１－１</p>
-        <a href="https://www.google.com/maps/search/?api=1&query=埼玉県児玉郡美里町小茂田８９１－１" target="_blank" class="map-link">
+        <a href="https://www.google.com/maps/search/?api=1&query=埼玉県児玉郡美里町小茂田891-1" target="_blank" class="map-link">
             ＞ Googleマップで見る
         </a>
         <br><br>
