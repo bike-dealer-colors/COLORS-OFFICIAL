@@ -10,21 +10,22 @@
         .container { width: 90%; max-width: 800px; margin: auto; padding: 20px; }
         .btn-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0; }
         .btn { padding: 15px 25px; text-decoration: none; color: #fff; border-radius: 5px; font-weight: bold; flex: 1; min-width: 150px; transition: 0.3s; }
-        .btn:hover { opacity: 0.8; }
+        .btn:hover { opacity: 0.8; transform: translateY(-2px); }
         
-        /* 各サイトのボタン色 */
-        .btn-carsensor { background: #ff6600; } /* カーセンサー */
-        .btn-goobike { background: #0055aa; }   /* グーバイク */
-        .btn-yahoo { background: #ff0000; }     /* ヤフオク */
-        .btn-youtube { background: #ff0000; border: 2px solid #fff; } /* YouTube */
-        .btn-insta { background: #e1306c; }     /* インスタ */
+        /* 各サイトのブランドカラー */
+        .btn-carsensor { background: #ff6600; } /* カーセンサー橙 */
+        .btn-goobike { background: #0055aa; }   /* グーバイク青 */
+        .btn-bikesensor { background: #000000; border: 1px solid #fff; } /* バイクセンサー黒 */
+        .btn-youtube { background: #ff0000; }     /* YouTube赤 */
+        .btn-yahoo { background: #ff0000; border: 2px solid #fff; } /* ヤフオク赤（枠付き） */
         
         .btn-assessment { background: #28a745; display: block; margin: 30px auto; width: 80%; font-size: 1.2rem; }
         
-        .insta-placeholder { width: 100%; height: 400px; background: #eee; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; margin: 20px 0; }
+        .insta-placeholder { width: 100%; height: 300px; background: #f4f4f4; border: 1px dashed #ccc; display: flex; align-items: center; justify-content: center; margin: 20px 0; }
         
         hr { border: 0; border-top: 1px solid #eee; margin: 40px 0; }
         footer { font-size: 0.8rem; color: #777; padding: 40px; background: #f9f9f9; }
+        .shop-info { margin-bottom: 30px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -35,37 +36,44 @@
 </header>
 
 <div class="container">
-    <h2>こだわりの整備と厳選車両</h2>
-    <p>シトロエン元エキスパート技師が営む、深谷市の車・バイクショップ「COLORS」です。</p>
+    <div class="shop-info">
+        <h2>こだわりの整備と厳選車両</h2>
+        <p>シトロエン元エキスパート技師が営む、深谷市の車・バイクショップ「COLORS」です。</p>
+        <p>プロの技術で一台一台、魂を込めて仕上げています。</p>
+    </div>
 
     <hr>
 
     <h3>📷 Instagram (Daily Work)</h3>
     <div class="insta-placeholder">
-        <p>ここにインスタの投稿が流れます！<br>（後ほど店長のアカウントを接続します）</p>
+        <p>Instagram連携準備中...<br>（店長の作業風景をここからチェック！）</p>
     </div>
 
     <hr>
 
-    <h3>🛒 販売車両・動画をチェック</h3>
+    <h3>🛒 在庫車両・動画をチェック</h3>
+    <p>最新の在庫状況や、整備の様子を動画で公開中！</p>
+    
     <div class="btn-group">
-        <a href="#" class="btn btn-carsensor">カーセンサー</a>
-        <a href="#" class="btn btn-goobike">グーバイク</a>
-        <a href="#" class="btn btn-youtube">YouTube チャンネル</a>
-        <a href="#" class="btn btn-yahoo">ヤフオク</a>
+        <a href="https://www.youtube.com/@%E3%82%AC%E3%83%AC%E3%83%BC%E3%82%B8%E5%8D%81%E8%89%B2" target="_blank" class="btn btn-youtube">YouTube チャンネル</a>
+        <a href="https://www.carsensor.net/shop/saitama/330303001/stocklist/" target="_blank" class="btn btn-carsensor">カーセンサー</a>
+        <a href="https://www.goobike.com/shop/client_8540007/zaiko.html" target="_blank" class="btn btn-goobike">GooBike</a>
+        <a href="https://www.bds-bikesensor.net/bike?shopCode=53427" target="_blank" class="btn btn-bikesensor">バイクセンサー</a>
+        <a href="#" target="_blank" class="btn btn-yahoo">ヤフオク出品一覧</a>
     </div>
 
     <hr>
 
-    <h3>💰 無料査定のご依頼</h3>
-    <p>車・バイクの売却をお考えの方はこちらから！<br>プロの目でしっかり査定いたします。</p>
-    <a href="mailto:オーナーのメールアドレス@gmail.com?subject=【査定依頼】&body=お名前：%0D%0Aお電話番号：%0D%0A車種：%0D%0A年式・走行距離： %0D%0Aメッセージ：" class="btn btn-assessment">
+    <h3>💰 車・バイクの無料査定</h3>
+    <p>売却をお考えの方、プロの整備士が正当に評価します。<br>お気軽に以下のボタンからメールをお送りください。</p>
+    <a href="mailto:ここに店長のGmailアドレス@gmail.com?subject=【査定依頼】&body=お名前：%0D%0Aお電話番号：%0D%0A車種：%0D%0A年式・走行距離： %0D%0Aメッセージ：" class="btn btn-assessment">
         📩 査定依頼メールを送る
     </a>
 
 </div>
 
 <footer>
+    <p>COLORS - 埼玉県深谷市</p>
     &copy; 2026 COLORS. All Rights Reserved.
 </footer>
 
