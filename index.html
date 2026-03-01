@@ -3,36 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COLORS - 車バイク業界20年の整備士が営む販売店</title>
+    <title>COLORS - 業界20年の技術と提案力の車・バイク販売店</title>
     <style>
         body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; text-align: center; color: #333; line-height: 1.6; background-color: #f4f4f4; }
-        header { background: #000; color: #fff; padding: 40px 0; }
+        header { background: #000; color: #fff; padding: 60px 0; }
         .container { width: 95%; max-width: 800px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
         
-        /* インスタ・スライドセクション */
-        .insta-section { margin: 20px 0; }
-        .insta-slider { display: flex; overflow-x: auto; gap: 10px; padding: 10px 0; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
-        .insta-card { flex: 0 0 200px; height: 200px; background: #eee; border-radius: 8px; display: flex; align-items: center; justify-content: center; scroll-snap-align: start; border: 1px solid #ddd; }
-        .insta-link { display: inline-block; margin-top: 10px; text-decoration: none; color: #e1306c; font-weight: bold; }
+        /* 店舗紹介文 */
+        .shop-info { text-align: left; padding: 0 10px; margin-bottom: 30px; }
+        .shop-info h2 { border-left: 5px solid #000; padding-left: 15px; margin-bottom: 20px; }
+        .shop-info p { margin-bottom: 15px; }
 
-        /* 各リンクボタンのスタイル */
+        /* インスタ・スクロール窓 */
+        .insta-window { width: 100%; height: 450px; overflow-y: scroll; border: 1px solid #ddd; border-radius: 8px; background: #fafafa; padding: 10px; box-sizing: border-box; }
+        .insta-content { min-height: 800px; padding: 20px; color: #666; } /* 実際はここに埋め込みコードが入る */
+
+        /* リンクボタンのスタイル */
         .btn-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0; }
-        .btn { padding: 15px 25px; text-decoration: none; color: #fff; border-radius: 5px; font-weight: bold; flex: 1; min-width: 160px; transition: 0.3s; font-size: 0.95rem; }
+        .btn { padding: 15px 20px; text-decoration: none; color: #fff; border-radius: 5px; font-weight: bold; flex: 1; min-width: 200px; transition: 0.3s; font-size: 0.95rem; }
         .btn:hover { opacity: 0.8; transform: translateY(-2px); }
         
-        .btn-goobike { background: #0055aa; }   /* GooBike */
-        .btn-carsensor { background: #ff6600; } /* カーセンサー */
-        .btn-bikesensor { background: #000; border: 1px solid #666; } /* バイクセンサー */
-        .btn-yahoo { background: #ffcc00; color: #000; } /* ヤフオク */
-        .btn-youtube { background: #ff0000; }     /* YouTube */
+        .btn-goobike { background: #0055aa; }
+        .btn-carsensor { background: #ff6600; }
+        .btn-bikesensor { background: #000; border: 1px solid #666; }
+        .btn-yahoo { background: #ffcc00; color: #000; }
+        .btn-youtube { background: #ff0000; }
         
-        /* 査定フォームのスタイル */
+        /* 査定・お問い合わせフォーム */
         .form-section { text-align: left; background: #f9f9f9; padding: 25px; border-radius: 8px; margin-top: 40px; border: 1px solid #eee; }
         .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; font-size: 0.9rem; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1rem; }
-        .submit-btn { background: #28a745; color: #fff; border: none; padding: 18px; width: 100%; border-radius: 5px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: 0.3s; margin-top: 10px; }
-        .submit-btn:hover { background: #218838; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .submit-btn { background: #28a745; color: #fff; border: none; padding: 18px; width: 100%; border-radius: 5px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: 0.3s; }
+
+        /* アクセスセクション */
+        .access-section { text-align: left; background: #333; color: #fff; padding: 30px; border-radius: 8px; margin-top: 40px; }
+        .map-link { color: #00d1ff; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; }
+        .tel-link { color: #fff; text-decoration: none; font-size: 1.2rem; font-weight: bold; }
 
         hr { border: 0; border-top: 1px solid #eee; margin: 40px 0; }
         footer { font-size: 0.8rem; color: #777; padding: 40px; }
@@ -47,25 +54,24 @@
 
 <div class="container">
     <div class="shop-info">
-        <h2>こだわりの整備と厳選車両</h2>
-        <p>車バイク業界20年の整備士が営む美里町の車、バイクの販売店「COLORS」です。</p>
-        <p>確かな技術と経験で、一台一台責任を持って仕上げています。</p>
+        <h2>技術と提案力で、理想のカーライフを。</h2>
+        <p>車・バイク業界で20年のキャリアを積み、シトロエンのエキスパート技師としても腕を磨いてきた店主が営む、埼玉県美里町の販売店「COLORS」です。</p>
+        <p>当店の強みは、プロの整備士としての「確かな技術力」だけではありません。お客様一人ひとりのライフスタイルやこだわり、将来のビジョンまでを汲み取り、最適な一台をご提案する「接客力」こそがCOLORSの真髄です。</p>
+        <p>「自分に合う車がわからない」「こだわりを形にしたい」という方も、ぜひ一度ご相談ください。20年の経験を活かした独自の視点で、あなたにとって最高のパートナーとなる車両をお届けします。</p>
     </div>
 
     <hr>
 
-    <div class="insta-section">
-        <h3>📷 Instagram (Daily Work)</h3>
-        <p style="font-size: 0.8rem; color: #666;">← 横にスライドしてチェック →</p>
-        <div class="insta-slider">
-            <div class="insta-card"><p style="font-size: 0.8rem;">作業風景<br>投稿 1</p></div>
-            <div class="insta-card"><p style="font-size: 0.8rem;">在庫車両<br>投稿 2</p></div>
-            <div class="insta-card"><p style="font-size: 0.8rem;">カスタム<br>投稿 3</p></div>
-            <div class="insta-card"><p style="font-size: 0.8rem;">納車整備<br>投稿 4</p></div>
+    <h3>📷 Instagram (Daily Work)</h3>
+    <p style="font-size: 0.8rem; color: #666;">窓の中でスクロールして最近の投稿をチェック！</p>
+    <div class="insta-window">
+        <div class="insta-content">
+            <p>Instagramの最新投稿が表示されるエリアです。<br>（ここに店長のインスタグラムから取得した埋め込みコードを配置します）</p>
+            <br>
+            <a href="https://www.instagram.com/bike_dealer_colors?igsh=MTc4NDRnbGVzd2p4Mw%3D%3D&utm_source=qr" target="_blank" style="color:#e1306c; font-weight:bold;">
+                ＞ インスタグラムを直接開く
+            </a>
         </div>
-        <a href="https://www.instagram.com/bike_dealer_colors?igsh=MTc4NDRnbGVzd2p4Mw%3D%3D&utm_source=qr" target="_blank" class="insta-link">
-            COLORS公式インスタグラムを見る ＞
-        </a>
     </div>
 
     <hr>
@@ -82,7 +88,7 @@
     <hr>
 
     <div class="form-section">
-        <h3 style="text-align: center; margin-bottom: 20px;">💰 無料査定のご依頼</h3>
+        <h3 style="text-align: center; margin-bottom: 20px;">💰 査定依頼・お問い合わせ</h3>
         <form action="https://formsubmit.co/bike-dealer-colors@ruby.plala.or.jp" method="POST">
             <input type="hidden" name="_next" value="https://bike-dealer-colors.github.io/COLORS-OFFICIAL/">
             <input type="hidden" name="_captcha" value="false">
@@ -102,8 +108,9 @@
             <div class="form-group">
                 <label>区分</label>
                 <select name="区分">
-                    <option value="バイク">バイク</option>
-                    <option value="車">車</option>
+                    <option value="バイク査定">バイク査定</option>
+                    <option value="車査定">車査定</option>
+                    <option value="お問い合わせ">お問い合わせ</option>
                 </select>
             </div>
             <div class="form-group">
@@ -111,28 +118,27 @@
                 <input type="text" name="車種" placeholder="例：ホンダ CB400SF" required>
             </div>
             <div class="form-group">
-                <label>グレード</label>
-                <input type="text" name="グレード">
+                <label>グレード / 年式 / 走行距離</label>
+                <input type="text" name="詳細情報" placeholder="例：スペック3 / 2005年 / 20,000km">
             </div>
             <div class="form-group">
-                <div style="display: flex; gap: 10px;">
-                    <div style="flex: 1;">
-                        <label>年式</label>
-                        <input type="text" name="年式" placeholder="例：2015年">
-                    </div>
-                    <div style="flex: 1;">
-                        <label>走行距離</label>
-                        <input type="text" name="走行距離" placeholder="例：15,000km">
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label>車両状態（100文字程度）</label>
-                <textarea name="車両状態" rows="4" placeholder="外装の状態やカスタム箇所など"></textarea>
+                <label>お問い合わせ内容（100文字程度）</label>
+                <textarea name="車両状態・お問い合わせ内容" rows="4" placeholder="外装の状態や、具体的な相談内容をご入力ください"></textarea>
             </div>
             
-            <button type="submit" class="submit-btn">この内容で査定依頼を送る</button>
+            <button type="submit" class="submit-btn">この内容で送信する</button>
         </form>
+    </div>
+
+    <div class="access-section">
+        <h3>📍 Access & Contact</h3>
+        <p><strong>住所：</strong> 埼玉県児玉郡美里町小茂田８９１－１</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=埼玉県児玉郡美里町小茂田８９１－１" target="_blank" class="map-link">
+            ＞ Googleマップで見る
+        </a>
+        <br><br>
+        <p><strong>電話番号：</strong> <a href="tel:0495716259" class="tel-link">０４９５－７１－６２５９</a></p>
+        <p style="font-size: 0.8rem; opacity: 0.8;">※作業中はお電話に出られない場合がございます。その際はフォームよりご連絡ください。</p>
     </div>
 
 </div>
