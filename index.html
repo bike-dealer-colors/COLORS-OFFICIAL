@@ -3,115 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COLORS - 業界20年の技術と提案力の車・バイク販売店</title>
+    <title>COLORS - 20年の技術と提案力。美里町の車・バイク販売店</title>
     <style>
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; text-align: center; color: #333; line-height: 1.6; background-color: #f4f4f4; }
-        header { background: #000; color: #fff; padding: 60px 0; }
-        .container { width: 95%; max-width: 800px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        /* 全体のベース設定 */
+        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.8; background-color: #f8fafc; }
         
-        .shop-info { text-align: left; padding: 0 10px; margin-bottom: 30px; }
-        .shop-info h2 { border-left: 5px solid #000; padding-left: 15px; margin-bottom: 20px; }
-        .shop-info p { margin-bottom: 15px; }
+        /* ヘッダー：ロゴが映えるデザイン */
+        header { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: #fff; padding: 40px 20px; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .logo-area img { max-width: 250px; height: auto; margin-bottom: 10px; } /* 明日ロゴを上げたらここが活きるぜ */
+        header h1 { margin: 0; font-size: 2rem; letter-spacing: 2px; }
+        header p { margin: 5px 0 0; opacity: 0.8; font-size: 0.9rem; }
 
-        /* インスタ・窓の装飾 */
-        .insta-window { width: 100%; height: 250px; overflow-y: scroll; border: 2px solid #e1306c; border-radius: 8px; background: #fff5f8; padding: 20px; box-sizing: border-box; position: relative; }
-        .insta-btn { display: inline-block; background: linear-gradient(45deg, #f09433 0%, #e73323 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 15px; }
+        .container { width: 92%; max-width: 800px; margin: -30px auto 40px; padding: 30px 20px; background: #fff; border-radius: 15px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); }
 
-        .btn-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0; }
-        .btn { padding: 15px 20px; text-decoration: none; color: #fff; border-radius: 5px; font-weight: bold; flex: 1; min-width: 200px; transition: 0.3s; font-size: 0.95rem; }
-        .btn:hover { opacity: 0.8; transform: translateY(-2px); }
+        /* キャッチコピーエリア */
+        .intro-section { text-align: center; margin-bottom: 40px; }
+        .intro-section h2 { color: #1e293b; font-size: 1.5rem; margin-bottom: 20px; position: relative; display: inline-block; padding-bottom: 10px; }
+        .intro-section h2::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 50px; height: 3px; background: #3b82f6; border-radius: 3px; }
+        .intro-text { text-align: left; font-size: 1rem; color: #475569; }
+
+        /* 特徴の三本柱（ここが華やかさのポイント！） */
+        .features { display: flex; flex-wrap: wrap; gap: 15px; margin: 30px 0; }
+        .feature-card { flex: 1; min-width: 200px; background: #eff6ff; padding: 20px; border-radius: 10px; text-align: center; }
+        .feature-card div { font-size: 2rem; margin-bottom: 10px; }
+        .feature-card h3 { margin: 0 0 10px; font-size: 1.1rem; color: #1e40af; }
+        .feature-card p { font-size: 0.85rem; margin: 0; color: #1e3a8a; }
+
+        /* リンクボタン：押しやすくカラフルに */
+        .btn-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 30px 0; }
+        .btn { padding: 16px 20px; text-decoration: none; color: #fff; border-radius: 8px; font-weight: bold; flex: 1; min-width: 240px; transition: all 0.3s ease; font-size: 1rem; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.2); opacity: 0.9; }
         
-        .btn-goobike { background: #0055aa; }
-        .btn-carsensor { background: #ff6600; }
-        .btn-bikesensor { background: #000; border: 1px solid #666; }
-        .btn-yahoo { background: #ffcc00; color: #000; }
-        .btn-youtube { background: #ff0000; }
-        
-        .form-section { text-align: left; background: #f9f9f9; padding: 25px; border-radius: 8px; margin-top: 40px; border: 1px solid #eee; }
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1rem; }
-        .submit-btn { background: #28a745; color: #fff; border: none; padding: 18px; width: 100%; border-radius: 5px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: 0.3s; margin-top: 10px; }
+        .btn-goobike { background-color: #0055aa; }
+        .btn-carsensor { background-color: #ff6600; }
+        .btn-bikesensor { background-color: #222; }
+        .btn-yahoo { background-color: #ffcc00; color: #000; }
+        .btn-youtube { background-color: #ff0000; }
 
-        .access-section { text-align: left; background: #333; color: #fff; padding: 30px; border-radius: 8px; margin-top: 40px; }
-        .map-link { color: #00d1ff; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; }
-        .tel-link { color: #fff; text-decoration: none; font-size: 1.2rem; font-weight: bold; }
+        /* フォーム：清潔感重視 */
+        .form-section { background: #f1f5f9; padding: 30px 20px; border-radius: 12px; margin-top: 50px; text-align: left; }
+        .form-section h3 { text-align: center; margin-bottom: 25px; color: #0f172a; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 8px; font-size: 0.9rem; color: #334155; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
+        .submit-btn { background: #10b981; color: #fff; border: none; padding: 20px; width: 100%; border-radius: 8px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: 0.3s; margin-top: 10px; }
+        .submit-btn:hover { background: #059669; }
 
-        hr { border: 0; border-top: 1px solid #eee; margin: 40px 0; }
-        footer { font-size: 0.8rem; color: #777; padding: 40px; }
+        /* アクセス：ダークトーンで締める */
+        .access-section { background: #1e293b; color: #fff; padding: 30px; border-radius: 12px; margin-top: 40px; text-align: left; }
+        .access-section h3 { color: #3b82f6; margin-top: 0; }
+        .map-link { color: #60a5fa; text-decoration: none; font-weight: bold; display: block; margin-top: 15px; }
+        .tel-link { color: #fff; text-decoration: none; font-size: 1.5rem; font-weight: bold; display: block; margin: 10px 0; }
+
+        hr { border: 0; border-top: 1px solid #e2e8f0; margin: 50px 0; }
+        footer { font-size: 0.8rem; color: #94a3b8; padding: 40px; text-align: center; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>COLORS</h1>
+    <div class="logo-area">
+        <img src="logo.png" alt="COLORS ロゴ" onerror="this.style.display='none'">
+        <h1>COLORS</h1>
+    </div>
     <p>Professional Mechanic & Vehicle Sales</p>
 </header>
 
 <div class="container">
-    <div class="shop-info">
-        <h2>20年の技術と、あなたに寄り添う提案力を。</h2>
-        <p>埼玉県美里町で車・バイクの販売を行っている「COLORS」です。業界で20年のキャリアを積んできた熟練の整備士が、一台一台に魂を込めて向き合っています。</p>
-        <p>当店の強みは確かな「整備技術」と、お客様のライフスタイルに合わせた「提案力」です。「自分に合う一台」を探している方は、ぜひプロの視点をご活用ください。</p>
+    <div class="intro-section">
+        <h2>20年の技術と、寄り添う提案。</h2>
+        <div class="intro-text">
+            <p>埼玉県美里町で車・バイクの販売を行っている「COLORS」です。業界20年のキャリアを積んできた熟練の整備士が、一台一台に魂を込めて向き合っています。</p>
+        </div>
     </div>
 
-    <hr>
-
-    <h3>📷 Instagram (Daily Work)</h3>
-    <div class="insta-window">
-        <p><strong>最新の作業風景をチェック！</strong><br>日々、整備や在庫車両の情報をアップしています。</p>
-        <a href="https://www.instagram.com/bike_dealer_colors?igsh=MTc4NDRnbGVzd2p4Mw%3D%3D&utm_source=qr" target="_blank" class="insta-btn">
-            COLORS公式インスタを開く
-        </a>
-        <p style="font-size: 0.8rem; color: #e1306c; margin-top: 15px;">※クリックするとInstagramへ移動します</p>
+    <div class="features">
+        <div class="feature-card">
+            <div>🔧</div>
+            <h3>確かな技術</h3>
+            <p>20年の経験で培った<br>妥協のない整備力</p>
+        </div>
+        <div class="feature-card">
+            <div>🤝</div>
+            <h3>親身な提案</h3>
+            <p>お客様一人ひとりに<br>最適な一台を厳選</p>
+        </div>
+        <div class="feature-card">
+            <div>🏍</div>
+            <h3>車もバイクも</h3>
+            <p>ジャンルを問わず<br>プロの視点でサポート</p>
+        </div>
     </div>
 
     <hr>
 
     <h3>🛒 在庫車両・動画をチェック</h3>
     <div class="btn-group">
-        <a href="https://www.goobike.com/shop/client_8540007/zaiko.html" target="_blank" class="btn btn-goobike">GooBike</a>
-        <a href="https://www.carsensor.net/shop/saitama/330303001/stocklist/" target="_blank" class="btn btn-carsensor">カーセンサー</a>
-        <a href="https://www.bds-bikesensor.net/bike?shopCode=53427" target="_blank" class="btn btn-bikesensor">バイクセンサー</a>
-        <a href="https://auctions.yahoo.co.jp/seller/23sGncMA3TvnWeFnJSYMuukXEJKi2?user_type=c" target="_blank" class="btn btn-yahoo">ヤフオク出品一覧</a>
-        <a href="https://www.youtube.com/@%E3%82%AC%E3%83%AC%E3%83%BC%E3%82%B8%E5%8D%81%E8%89%B2" target="_blank" class="btn btn-youtube">YouTube チャンネル</a>
+        <a href="https://www.goobike.com/shop/client_8540007/zaiko.html" target="_blank" class="btn btn-goobike">GooBike 在庫一覧</a>
+        <a href="https://www.carsensor.net/shop/saitama/330303001/stocklist/" target="_blank" class="btn btn-carsensor">カーセンサー 在庫一覧</a>
+        <a href="https://www.bds-bikesensor.net/bike?shopCode=53427" target="_blank" class="btn btn-bikesensor">バイクセンサー 在庫一覧</a>
+        <a href="https://auctions.yahoo.co.jp/seller/23sGncMA3TvnWeFnJSYMuukXEJKi2?user_type=c" target="_blank" class="btn btn-yahoo">ヤフオク 出品リスト</a>
+        <a href="https://www.youtube.com/@%E3%82%AC%E3%83%AC%E3%83%BC%E3%82%B8%E5%8D%81%E8%89%B2" target="_blank" class="btn btn-youtube">YouTube ガレージ十色</a>
     </div>
 
     <hr>
 
     <div class="form-section">
-        <h3 style="text-align: center; margin-bottom: 20px;">💰 査定依頼・お問い合わせ</h3>
+        <h3>💰 査定依頼・お問い合わせ</h3>
         <form action="https://formsubmit.co/bike-dealer-colors@ruby.plala.or.jp" method="POST">
             <input type="hidden" name="_next" value="https://bike-dealer-colors.github.io/COLORS-OFFICIAL/">
             <input type="hidden" name="_captcha" value="false">
 
             <div class="form-group">
                 <label>お名前</label>
-                <input type="text" name="お名前" required>
+                <input type="text" name="お名前" placeholder="田中 太郎" required>
             </div>
             <div class="form-group">
                 <label>お電話番号</label>
-                <input type="tel" name="電話番号" required>
-            </div>
-            <div class="form-group">
-                <label>メールアドレス</label>
-                <input type="email" name="email" required>
+                <input type="tel" name="電話番号" placeholder="090-0000-0000" required>
             </div>
             <div class="form-group">
                 <label>区分</label>
                 <select name="区分">
-                    <option value="バイク査定">バイク査定</option>
-                    <option value="車査定">車査定</option>
-                    <option value="お問い合わせ">お問い合わせ</option>
+                    <option value="バイク査定">バイク査定を依頼</option>
+                    <option value="車査定">車査定を依頼</option>
+                    <option value="お問い合わせ">その他お問い合わせ</option>
                 </select>
             </div>
             <div class="form-group">
-                <label>車種</label>
-                <input type="text" name="車種" placeholder="例：ホンダ CB400SF" required>
+                <label>車種 / 年式 / 距離</label>
+                <input type="text" name="車両情報" placeholder="ホンダ CB400SF / 2015年 / 1.5万km" required>
             </div>
             <div class="form-group">
                 <label>お問い合わせ内容</label>
-                <textarea name="内容" rows="4" placeholder="具体的な相談内容をご入力ください"></textarea>
+                <textarea name="内容" rows="4" placeholder="ご相談内容や車両の状態などをご記入ください"></textarea>
             </div>
             
             <button type="submit" class="submit-btn">この内容で送信する</button>
@@ -121,18 +146,20 @@
     <div class="access-section">
         <h3>📍 Access & Contact</h3>
         <p><strong>住所：</strong> 埼玉県児玉郡美里町小茂田８９１－１</p>
-        <a href="https://www.google.com/maps/search/?api=1&query=埼玉県児玉郡美里町小茂田８９１－１" target="_blank" class="map-link">
-            ＞ Googleマップで見る
+        <a href="https://www.google.com/maps/search/?api=1&query=埼玉県児玉郡美里町小茂田891-1" target="_blank" class="map-link">
+            ＞ Googleマップでルート案内
         </a>
-        <br><br>
-        <p><strong>電話番号：</strong> <a href="tel:0495716259" class="tel-link">０４９５－７１－６２５９</a></p>
+        <br>
+        <p><strong>電話番号：</strong></p>
+        <a href="tel:0495716259" class="tel-link">0495-71-6259</a>
+        <p style="font-size: 0.8rem; opacity: 0.7;">作業中はお電話に出られない場合がございます。その際はフォームよりご連絡ください。</p>
     </div>
 
 </div>
 
 <footer>
     <p>COLORS - 埼玉県児玉郡美里町</p>
-    © 2026 COLORS. All Rights Reserved.
+    &copy; 2026 COLORS. All Rights Reserved.
 </footer>
 
 </body>
