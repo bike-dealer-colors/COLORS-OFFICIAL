@@ -6,36 +6,25 @@
     <title>COLORS - 20年の技術と提案力。美里町の車・バイク販売店</title>
     <style>
         body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.8; background-color: #f0f4f8; }
-        
         header { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: #fff; padding: 50px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
         .header-logo-text { max-width: 280px; height: auto; margin-bottom: 10px; }
         header p { margin: 10px 0 0; opacity: 0.8; font-size: 0.9rem; letter-spacing: 2px; font-weight: bold; }
-
         .container { width: 94%; max-width: 800px; margin: -20px auto 40px; padding: 40px 20px; background: #fff; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-
         .intro-section { text-align: center; margin-bottom: 40px; }
         .intro-section h2 { color: #1e293b; font-size: 1.4rem; margin-bottom: 20px; }
-
-        /* 信頼のトライアングル・中心ロゴ版 */
         .triangle-container { position: relative; width: 100%; max-width: 550px; margin: 40px auto; padding: 20px 0; min-height: 380px; }
         .triangle-lines { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
         .triangle-lines svg { width: 100%; height: 100%; }
-
-        /* 中心のピストン＆羽ロゴ */
         .center-logo-area { position: absolute; top: 58%; left: 50%; transform: translate(-50%, -50%); z-index: 3; width: 160px; }
         .logo-mark-center { width: 100%; height: auto; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2)); }
-
         .triangle-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; position: relative; z-index: 2; }
-        .feature-item { background: #fff; border: 2px solid #3b82f6; padding: 15px 5px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); width: 140px; margin: 0 auto; transition: 0.3s; }
+        .feature-item { background: #fff; border: 2px solid #3b82f6; padding: 15px 5px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); width: 140px; margin: 0 auto; }
         .top-item { grid-column: 1 / span 2; margin-bottom: 60px; }
         .feature-icon { font-size: 2rem; margin-bottom: 5px; display: block; }
         .feature-item h3 { margin: 0; font-size: 0.95rem; color: #1e40af; }
         .feature-item p { margin: 5px 0 0; font-size: 0.75rem; color: #475569; line-height: 1.3; }
-
-        .insta-section { margin: 50px 0; }
         .insta-window { width: 100%; height: 400px; overflow-y: scroll; border: 2px solid #e1306c; border-radius: 12px; background: #fff; padding: 15px; box-sizing: border-box; }
         .insta-btn { display: inline-block; background: linear-gradient(45deg, #f09433 0%, #e73323 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 20px; font-size: 0.9rem; }
-
         .btn-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 40px 0; }
         .btn { padding: 18px 20px; text-decoration: none; color: #fff; border-radius: 10px; font-weight: bold; flex: 1; min-width: 250px; transition: 0.3s; font-size: 1rem; text-align: center; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
@@ -44,32 +33,26 @@
         .btn-bikesensor { background-color: #222; }
         .btn-yahoo { background-color: #ffcc00; color: #000; }
         .btn-youtube { background-color: #ff0000; }
-
         .form-section { background: #f8fafc; padding: 30px 20px; border-radius: 15px; margin-top: 50px; text-align: left; border: 1px solid #e2e8f0; }
         .form-group { margin-bottom: 20px; }
         .form-group label { display: block; font-weight: bold; margin-bottom: 8px; color: #334155; }
         .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box; font-size: 1rem; }
         .submit-btn { background: #10b981; color: #fff; border: none; padding: 20px; width: 100%; border-radius: 10px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: 0.3s; }
-
         .access-section { background: #1e293b; color: #fff; padding: 35px; border-radius: 15px; margin-top: 40px; text-align: left; }
         .tel-link { color: #fff; text-decoration: none; font-size: 1.6rem; font-weight: bold; display: block; margin: 10px 0; }
-
         footer { font-size: 0.8rem; color: #94a3b8; padding: 40px; text-align: center; }
     </style>
 </head>
 <body>
-
 <header>
     <img src="logo-text.png" alt="COLORS 文字ロゴ" class="header-logo-text" onerror="this.style.display='none'">
     <p>Professional Mechanic & Vehicle Sales</p>
 </header>
-
 <div class="container">
     <div class="intro-section">
         <h2>20年の技術と提案。理想の相棒を、ここで。</h2>
-        <p style="text-align: left; color: #475569; font-size: 0.95rem;">埼玉県児玉郡美里町で車・バイクの販売を行っている「COLORS」です。車バイク業界20年の整備士が、一台一台に魂を込めて向き合っています。</p>
+        <p style="text-align: left; color: #475569; font-size: 0.95rem;">埼玉県児玉郡美里町で車・バイクの販売を行っている「COLORS」です。業界20年のキャリアを積んできた整備士が、一台一台に魂を込めて向き合っています。</p>
     </div>
-
     <div class="triangle-container">
         <div class="triangle-lines">
             <svg viewBox="0 0 500 400">
@@ -78,11 +61,9 @@
                 <line x1="110" y1="300" x2="390" y2="300" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="8 4" />
             </svg>
         </div>
-
         <div class="center-logo-area">
             <img src="logo-mark.jpg" alt="COLORS ロゴマーク" class="logo-mark-center">
         </div>
-
         <div class="triangle-grid">
             <div class="feature-item top-item">
                 <span class="feature-icon">🔧</span>
@@ -101,9 +82,7 @@
             </div>
         </div>
     </div>
-
     <hr>
-
     <div class="insta-section">
         <h3>📷 Instagram (Daily Work)</h3>
         <div class="insta-window">
@@ -113,9 +92,7 @@
         </div>
         <a href="https://www.instagram.com/bike_dealer_colors?igsh=MTc4NDRnbGVzd2p4Mw%3D%3D&utm_source=qr" target="_blank" class="insta-btn">Instagramを開く</a>
     </div>
-
     <hr>
-
     <h3>🛒 在庫車両・動画をチェック</h3>
     <div class="btn-group">
         <a href="https://www.goobike.com/shop/client_8540007/zaiko.html" target="_blank" class="btn btn-goobike">GooBike 在庫一覧</a>
@@ -124,15 +101,12 @@
         <a href="https://auctions.yahoo.co.jp/seller/23sGncMA3TvnWeFnJSYMuukXEJKi2?user_type=c" target="_blank" class="btn btn-yahoo">ヤフオク 出品リスト</a>
         <a href="https://www.youtube.com/@%E3%82%AC%E3%83%AC%E3%83%BC%E3%82%B8%E5%8D%81%E8%89%B2" target="_blank" class="btn btn-youtube">YouTube ガレージ十色</a>
     </div>
-
     <hr>
-
     <div class="form-section">
-        <h3 style="text-align: center; margin-bottom: 25px;">💰 査定依頼・お問い合わせ</h3>
-        <form action="https://formsubmit.co/bike-dealer-colors@ruby.plala.or.jp" method="POST">
+        <h3>💰 査定依頼・お問い合わせ</h3>
+        <form action="https://formsubmit.co/842e9685167f81a3eefe6204045427df" method="POST">
             <input type="hidden" name="_next" value="https://bike-dealer-colors.github.io/COLORS-OFFICIAL/">
             <input type="hidden" name="_captcha" value="false">
-
             <div class="form-group">
                 <label>お名前</label>
                 <input type="text" name="お名前" required>
@@ -157,11 +131,9 @@
                 <label>メッセージ内容</label>
                 <textarea name="内容" rows="4"></textarea>
             </div>
-            
             <button type="submit" class="submit-btn">この内容で送信する</button>
         </form>
     </div>
-
     <div class="access-section">
         <h3>📍 Access & Contact</h3>
         <p><strong>住所：</strong> 埼玉県児玉郡美里町小茂田８９１－１</p>
@@ -170,13 +142,10 @@
         <p><strong>電話番号：</strong></p>
         <a href="tel:0495716259" class="tel-link">0495-71-6259</a>
     </div>
-
 </div>
-
 <footer>
     <p>COLORS - 埼玉県児玉郡美里町</p>
     © 2026 COLORS. All Rights Reserved.
 </footer>
-
 </body>
 </html>
