@@ -29,7 +29,6 @@
         .insta-window { width: 100%; height: 400px; overflow-y: scroll; border: 2px solid #e1306c; border-radius: 12px; background: #fff; padding: 15px; box-sizing: border-box; }
         .insta-btn { display: inline-block; background: linear-gradient(45deg, #f09433 0%, #e73323 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 20px; font-size: 0.9rem; }
         
-        /* リンクボタン：部品用アカウントを追加して整列 */
         .btn-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 40px 0; }
         .btn { padding: 18px 20px; text-decoration: none; color: #fff; border-radius: 10px; font-weight: bold; flex: 1; min-width: 250px; transition: 0.3s; font-size: 1rem; text-align: center; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
@@ -39,7 +38,9 @@
         .btn-yahoo { background-color: #ffcc00; color: #000; }
         .btn-youtube { background-color: #ff0000; }
         
-        .form-section { background: #f8fafc; padding: 30px 20px; border-radius: 15px; margin-top: 50px; text-align: left; border: 1px solid #e2e8f0; }
+        .form-section { background: #f8fafc; padding: 35px 25px; border-radius: 15px; margin-top: 50px; text-align: left; border: 1px solid #e2e8f0; }
+        .form-section h3 { text-align: center; margin-bottom: 10px; color: #0f172a; font-size: 1.4rem; }
+        .form-disclaimer { font-size: 0.85rem; color: #ef4444; margin-bottom: 25px; text-align: center; font-weight: bold; line-height: 1.4; }
         .form-group { margin-bottom: 20px; }
         .form-group label { display: block; font-weight: bold; margin-bottom: 8px; color: #334155; }
         .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box; font-size: 1rem; }
@@ -58,7 +59,7 @@
 <div class="container">
     <div class="intro-section">
         <h2>20年の技術と提案。理想の相棒を、ここで。</h2>
-        <p style="text-align: left; color: #475569; font-size: 0.95rem;">埼玉県児玉郡美里町で車・バイクの販売を行っている「COLORS」です。車バイク業界20年の整備士が、一台一台に魂を込めて向き合っています。</p>
+        <p style="text-align: left; color: #475569; font-size: 0.95rem;">埼玉県児玉郡美里町で車・バイクの販売を行っている「COLORS」です。業界20年のキャリアを積んできた整備士が、一台一台に魂を込めて向き合っています。</p>
     </div>
     <div class="triangle-container">
         <div class="triangle-lines">
@@ -113,6 +114,8 @@
     <hr>
     <div class="form-section">
         <h3>💰 査定依頼・お問い合わせ</h3>
+        <p class="form-disclaimer">査定に関してはお客様のお住まいの地域によってはおおよそのお値段のみでのご対応の場合もございます、予めご了承ください。</p>
+        
         <form action="https://formsubmit.co/842e9685167f81a3eefe6204045427df" method="POST">
             <input type="hidden" name="_next" value="https://bike-dealer-colors.github.io/COLORS-OFFICIAL/">
             <input type="hidden" name="_captcha" value="false">
