@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COLORS - 20年の技術と提案力。美里町の車・バイク販売店</title>
     <style>
-        /* 全体のベース設定 */
+        /* 全体のベースセッティング */
         body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.8; background-color: #f0f4f8; }
         
-        /* ヘッダー：文字ロゴ看板 */
+        /* ヘッダー：看板文字ロゴ */
         header { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: #fff; padding: 50px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
         .header-logo-text { max-width: 280px; height: auto; margin-bottom: 10px; }
         header p { margin: 10px 0 0; opacity: 0.8; font-size: 0.9rem; letter-spacing: 2px; font-weight: bold; }
@@ -18,7 +18,7 @@
         .intro-section { text-align: center; margin-bottom: 40px; }
         .intro-section h2 { color: #1e293b; font-size: 1.4rem; margin-bottom: 20px; }
 
-        /* 信頼のトライアングル・中心ロゴ版 */
+        /* 信頼のトライアングル ＋ 透過ピストンロゴ */
         .triangle-container { position: relative; width: 100%; max-width: 550px; margin: 40px auto; padding: 20px 0; min-height: 380px; }
         .triangle-lines { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
         .triangle-lines svg { width: 100%; height: 100%; }
@@ -32,24 +32,21 @@
         .feature-item h3 { margin: 0; font-size: 0.95rem; color: #1e40af; }
         .feature-item p { margin: 5px 0 0; font-size: 0.75rem; color: #475569; line-height: 1.3; }
 
-        /* ★特注・インスタ・ビジュアルバナー */
+        /* Instagramセクション（スクロール窓） */
         .insta-section { margin: 50px 0; text-align: center; }
-        .insta-banner { 
-            display: block;
-            background: linear-gradient(45deg, #f09433 0%, #e73323 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            color: #fff;
-            padding: 45px 20px;
-            border-radius: 18px;
-            text-decoration: none;
-            box-shadow: 0 8px 25px rgba(225, 48, 108, 0.4);
-            transition: 0.3s;
+        .insta-window { 
+            width: 100%; 
+            height: 650px; 
+            overflow-y: auto; 
+            border: 2px solid #e1306c; 
+            border-radius: 12px; 
+            background: #fff; 
+            padding: 10px; 
+            box-sizing: border-box; 
         }
-        .insta-banner:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(225, 48, 108, 0.6); }
-        .insta-banner h3 { margin: 0; font-size: 1.6rem; letter-spacing: 1px; }
-        .insta-banner p { margin: 10px 0 0; opacity: 0.95; font-weight: bold; font-size: 1rem; }
-        .insta-id { background: rgba(255,255,255,0.2); padding: 6px 18px; border-radius: 20px; font-size: 0.95rem; margin-top: 20px; display: inline-block; font-weight: bold; border: 1px solid rgba(255,255,255,0.4); }
+        .insta-btn { display: inline-block; background: linear-gradient(45deg, #f09433 0%, #e73323 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 20px; font-size: 0.9rem; }
 
-        /* 各種リンクボタン */
+        /* ボタンリンク集 */
         .btn-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 40px 0; }
         .btn { padding: 18px 20px; text-decoration: none; color: #fff; border-radius: 10px; font-weight: bold; flex: 1; min-width: 250px; transition: 0.3s; font-size: 1rem; text-align: center; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
@@ -59,19 +56,17 @@
         .btn-yahoo { background-color: #ffcc00; color: #000; }
         .btn-youtube { background-color: #ff0000; }
 
-        /* 査定依頼フォーム */
+        /* お問い合わせフォームセクション */
         .form-section { background: #f8fafc; padding: 35px 25px; border-radius: 15px; margin-top: 50px; text-align: left; border: 1px solid #e2e8f0; }
         .form-section h3 { text-align: center; margin-bottom: 10px; color: #0f172a; font-size: 1.4rem; }
         .form-disclaimer { font-size: 0.85rem; color: #ef4444; margin-bottom: 25px; text-align: center; font-weight: bold; line-height: 1.4; }
-        
         .form-group { margin-bottom: 20px; }
         .form-group label { display: block; font-weight: bold; margin-bottom: 8px; color: #334155; }
         .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box; font-size: 1rem; }
-        
-        .submit-btn { background: #10b981; color: #fff; border: none; padding: 20px; width: 100%; border-radius: 10px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: 0.3s; margin-top: 10px; }
+        .submit-btn { background: #10b981; color: #fff; border: none; padding: 20px; width: 100%; border-radius: 10px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: 0.3s; }
         .submit-btn:hover { background: #059669; }
 
-        /* アクセス・連絡先 */
+        /* アクセス情報 */
         .access-section { background: #1e293b; color: #fff; padding: 35px; border-radius: 15px; margin-top: 40px; text-align: left; }
         .tel-link { color: #fff; text-decoration: none; font-size: 1.6rem; font-weight: bold; display: block; margin: 10px 0; }
 
@@ -124,11 +119,13 @@
     <hr>
 
     <div class="insta-section">
-        <a href="https://www.instagram.com/bike_dealer_colors?igsh=MTc4NDRnbGVzd2p4Mw%3D%3D&utm_source=qr" target="_blank" class="insta-banner">
-            <h3>📷 Instagram</h3>
-            <p>最新の在庫・作業風景はここからチェック！</p>
-            <div class="insta-id">@bike_dealer_colors</div>
-        </a>
+        <h3>📷 Instagram (Daily Work)</h3>
+        <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">最新の作業風景をチェック！</p>
+        <div class="insta-window">
+            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+            <iframe src="https://lightwidget.com/widgets/fdaa173c5e725e048da94e6206664398.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+        </div>
+        <a href="https://www.instagram.com/bike_dealer_colors" target="_blank" class="insta-btn">Instagramで詳しく見る</a>
     </div>
 
     <hr>
@@ -153,15 +150,8 @@
         <form action="https://formsubmit.co/842e9685167f81a3eefe6204045427df" method="POST">
             <input type="hidden" name="_next" value="https://bike-dealer-colors.github.io/COLORS-OFFICIAL/">
             <input type="hidden" name="_captcha" value="false">
-
-            <div class="form-group">
-                <label>お名前</label>
-                <input type="text" name="お名前" required>
-            </div>
-            <div class="form-group">
-                <label>お電話番号</label>
-                <input type="tel" name="電話番号" required>
-            </div>
+            <div class="form-group"><label>お名前</label><input type="text" name="お名前" required></div>
+            <div class="form-group"><label>お電話番号</label><input type="tel" name="電話番号" required></div>
             <div class="form-group">
                 <label>区分</label>
                 <select name="区分">
@@ -170,15 +160,8 @@
                     <option value="お問い合わせ">その他お問い合わせ</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label>車種 / 年式 / 距離</label>
-                <input type="text" name="車両情報" placeholder="例：Z900RS / 2022年式 / 5000km" required>
-            </div>
-            <div class="form-group">
-                <label>メッセージ内容</label>
-                <textarea name="内容" rows="4" placeholder="詳細なご要望があればご記入ください"></textarea>
-            </div>
-            
+            <div class="form-group"><label>車種 / 年式 / 距離</label><input type="text" name="車両情報" required></div>
+            <div class="form-group"><label>メッセージ内容</label><textarea name="内容" rows="4"></textarea></div>
             <button type="submit" class="submit-btn">この内容で送信する</button>
         </form>
     </div>
@@ -186,13 +169,11 @@
     <div class="access-section">
         <h3>📍 Access & Contact</h3>
         <p><strong>住所：</strong> 埼玉県児玉郡美里町小茂田８９１－１</p>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=埼玉県児玉郡美里町小茂田891-1" target="_blank" style="color: #60a5fa; font-weight: bold; text-decoration: none;">＞ Googleマップでルート案内を起動</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=埼玉県児玉郡美里町小茂田891-1" target="_blank" style="color: #60a5fa; font-weight: bold; text-decoration: none;">＞ Googleマップでルート案内</a>
         <br><br>
         <p><strong>電話番号：</strong></p>
         <a href="tel:0495716259" class="tel-link">0495-71-6259</a>
-        <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 10px;">※作業中はお電話に出られない場合がございます。その際はフォームよりご連絡ください。</p>
     </div>
-
 </div>
 
 <footer>
