@@ -18,19 +18,43 @@
         .intro-section { text-align: center; margin-bottom: 40px; }
         .intro-section h2 { color: #1e293b; font-size: 1.4rem; margin-bottom: 20px; }
 
-        /* 信頼のトライアングル ＋ 透過ピストンロゴ */
+        /* ★信頼のトライアングル・精密チリ合わせセクション */
         .triangle-container { position: relative; width: 100%; max-width: 550px; margin: 40px auto; padding: 20px 0; min-height: 380px; }
         .triangle-lines { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
         .triangle-lines svg { width: 100%; height: 100%; }
+        
+        /* 中心ロゴ */
         .center-logo-area { position: absolute; top: 58%; left: 50%; transform: translate(-50%, -50%); z-index: 3; width: 160px; }
         .logo-mark-center { width: 100%; height: auto; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2)); }
         
         .triangle-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; position: relative; z-index: 2; }
-        .feature-item { background: #fff; border: 2px solid #3b82f6; padding: 15px 5px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); width: 140px; margin: 0 auto; }
+        
+        /* ★feature-item：ここを精密調整したぜ！ */
+        .feature-item { 
+            background: #fff; 
+            border: 2px solid #3b82f6; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+            width: 150px; /* 幅を少し広げて安定させたぜ */
+            height: 150px; /* 正方形にして、真ん中配置をしやすくしたぜ */
+            margin: 0 auto;
+            
+            /* ★これが「真ん中」の魔法だぜ！ */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* 上下中央 */
+            align-items: center; /* 左右中央 */
+            text-align: center;
+            padding: 10px; /* 内側の余裕 */
+            box-sizing: border-box; /* パディングを含めたサイズ計算 */
+        }
+        
         .top-item { grid-column: 1 / span 2; margin-bottom: 60px; }
-        .feature-icon { font-size: 2rem; margin-bottom: 5px; display: block; }
-        .feature-item h3 { margin: 0; font-size: 0.95rem; color: #1e40af; }
-        .feature-item p { margin: 5px 0 0; font-size: 0.75rem; color: #475569; line-height: 1.3; }
+        
+        /* アイコンと文字のバランス調整 */
+        .feature-icon { font-size: 2.2rem; margin-bottom: 8px; display: block; line-height: 1; }
+        .feature-item h3 { margin: 0; font-size: 1rem; color: #1e40af; line-height: 1.2; font-weight: bold; }
+        .feature-item p { margin: 6px 0 0; font-size: 0.8rem; color: #475569; line-height: 1.4; }
 
         /* Instagramセクション：Behold仕様 */
         .insta-section { margin: 50px 0; text-align: center; }
@@ -44,9 +68,7 @@
             padding: 10px; 
             box-sizing: border-box; 
         }
-        /* Beholdウィジェット自体の調整 */
         behold-widget { display: block; width: 100%; }
-
         .insta-btn { display: inline-block; background: linear-gradient(45deg, #f09433 0%, #e73323 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 20px; font-size: 0.9rem; }
 
         /* 在庫・リンクボタン群 */
@@ -72,7 +94,6 @@
         /* アクセス情報 */
         .access-section { background: #1e293b; color: #fff; padding: 35px; border-radius: 15px; margin-top: 40px; text-align: left; }
         .tel-link { color: #fff; text-decoration: none; font-size: 1.6rem; font-weight: bold; display: block; margin: 10px 0; }
-
         footer { font-size: 0.8rem; color: #94a3b8; padding: 40px; text-align: center; }
     </style>
 </head>
@@ -177,7 +198,7 @@
     <div class="access-section">
         <h3>📍 Access & Contact</h3>
         <p><strong>住所：</strong> 埼玉県児玉郡美里町小茂田８９１－１</p>
-        <a href="https://www.google.com/maps/search/?api=1&query=埼玉県児玉郡美里町小茂田８９１－１" target="_blank" style="color: #60a5fa; font-weight: bold; text-decoration: none;">＞ Googleマップでルート案内</a>
+        <a href="http://googleusercontent.com/maps.google.com/3" target="_blank" style="color: #60a5fa; font-weight: bold; text-decoration: none;">＞ Googleマップでルート案内</a>
         <br><br>
         <p><strong>電話番号：</strong></p>
         <a href="tel:0495716259" class="tel-link">0495-71-6259</a>
