@@ -44,7 +44,7 @@
         .btn-yahoo { background-color: #ffcc00; color: #000; }
         .btn-youtube { background-color: #ff0000; }
 
-        /* ★工賃表セクション（特注デザイン） */
+        /* 工賃表セクション（特注デザイン） */
         .price-section { margin: 60px 0; }
         .price-section h3 { text-align: center; color: #1e293b; margin-bottom: 10px; font-size: 1.5rem; }
         .price-sub { text-align: center; font-size: 0.85rem; color: #ef4444; margin-bottom: 25px; font-weight: bold; }
@@ -191,7 +191,7 @@
         <a href="https://www.goobike.com/shop/client_8540007/zaiko.html" target="_blank" class="btn btn-goobike">GooBike 在庫一覧</a>
         <a href="https://www.carsensor.net/shop/saitama/330303001/stocklist/" target="_blank" class="btn btn-carsensor">カーセンサー 在庫一覧</a>
         <a href="https://www.bds-bikesensor.net/bike?shopCode=53427" target="_blank" class="btn btn-bikesensor">バイクセンサー 在庫一覧</a>
-        <a href="https://auctions.yahoo.co.jp/seller/23sGncMA3TvnWeFnJSYMuukXEJKi2?user_type=c" target="_blank" class="btn btn-yahoo">ヤフオク 車両出品一覧</a>
+        <a href="https://auctions.yahoo.co.jp/seller/23sGncMA3TvnWeFnJSYMuukXEJKi2?user_type=c" target="_blank" class="btn btn-yahoo">ヤフオク 車流出品一覧</a>
         <a href="https://auctions.yahoo.co.jp/seller/8a5dywwf7jCGbR621obDG7CPjaHy1?user_type=c" target="_blank" class="btn btn-yahoo">ヤフオク 部品1</a>
         <a href="https://auctions.yahoo.co.jp/seller/2V7YXRV6iRYv8pcmczsSLAgEhD2SY?user_type=c" target="_blank" class="btn btn-yahoo">ヤフオク 部品2</a>
         <a href="https://www.youtube.com/@%E3%82%AC%E3%83%AC%E3%83%BC%E3%82%B8%E5%8D%81%E8%89%B2" target="_blank" class="btn btn-youtube">YouTube ガレージ十色</a>
@@ -245,12 +245,44 @@
 </footer>
 
 <script>
-    // カウンター制御（簡易デモ版）
     async function updateCounter() {
-        // 注：api.countapi.xyzは現在不安定な場合があるため、表示を固定しつつTOTALを擬似的に表現
-        document.getElementById('total_count').innerText = '158';
-        document.getElementById('today_count').innerText = '5';
-        document.getElementById('yesterday_count').innerText = '12';
+        // 💡店長！ここにさっきコピーしたGASの「ウェブアプリURL」をバシッと貼り付けてくれ！
+        const GAS_URL = 'https://script.google.com/macros/s/AKfycbxVqzv4w5tr0R8QcrN9hET5UOj65-7j-6R40U1FiQWWxtjx-R9HfNxXjHvoLPg2cudT/exec'; 
+        
+        if (GAS_URL === 'ここにコピーしたURLを貼る') {
+            document.getElementById('today_count').innerText = '0';
+            document.getElementById('yesterday_count').innerText = '0';
+            document.getElementById('total_count').innerText = '0';
+            return;
+        }
+
+        // 日本時間の今日の日付（YYYY-MM-DD）を作成してスタンプにする
+        const now = new Date();
+        const jstDate = new Intl.DateTimeFormat('ja-JP', { timeZone: 'Asia/Tokyo', year: 'numeric', month: '2-digit', day: '2-digit' }).format(now).replace(/\//g, '-');
+        
+        // localStorageをチェックして同日重複アクセスを判定
+        const lastVisit = localStorage.getItem('colors_counter_visit');
+        let action = 'get'; // 基本は数字を読み込むだけ（F5連打対策）
+        
+        if (lastVisit !== jstDate) {
+          // 今日初めてこの端末（スマホ・PC）から開いた場合だけカウントを増やす
+          action = 'hit';
+          localStorage.setItem('colors_counter_visit', jstDate);
+        }
+        
+        try {
+            const response = await fetch(`${GAS_URL}?action=${action}`);
+            const data = await response.json();
+            
+            document.getElementById('today_count').innerText = data.today;
+            document.getElementById('yesterday_count').innerText = data.yesterday;
+            document.getElementById('total_count').innerText = data.total;
+        } catch (e) {
+            console.error('Counter Error:', e);
+            document.getElementById('today_count').innerText = '1';
+            document.getElementById('yesterday_count').innerText = '1';
+            document.getElementById('total_count').innerText = 'COLORS';
+        }
     }
     updateCounter();
 </script>
