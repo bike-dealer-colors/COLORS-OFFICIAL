@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COLORS - 20年の技術と提案力。美里町の車・バイク販売店</title>
+    <title>COLORS - 20年の技術と提案力。深谷市の車・バイク販売店</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <style>
         /* 全体のベースセッティング */
@@ -12,6 +12,54 @@
         .header-logo-text { max-width: 280px; height: auto; margin-bottom: 10px; }
         header p { margin: 10px 0 0; opacity: 0.8; font-size: 0.9rem; letter-spacing: 2px; font-weight: bold; }
         .container { width: 94%; max-width: 800px; margin: -20px auto 40px; padding: 40px 20px; background: #fff; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+
+        /* 📢 店舗移転・緊急お知らせバナー */
+        .news-banner {
+            background: #fff5f5;
+            border: 2px solid #ef4444;
+            border-radius: 15px;
+            padding: 25px 20px;
+            margin-bottom: 35px;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15);
+        }
+        .news-banner h3 {
+            margin: 0 0 12px;
+            color: #dc2626;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .news-banner p {
+            margin: 0 0 15px;
+            font-size: 0.95rem;
+            color: #1f2937;
+            line-height: 1.7;
+        }
+        .news-info-list {
+            background: #fff;
+            border: 1px solid #fca5a5;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        .news-info-list div {
+            margin-bottom: 6px;
+        }
+        .news-info-list div:last-child {
+            margin-bottom: 0;
+        }
+        .news-notice {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 12px 15px;
+            font-size: 0.85rem;
+            color: #991b1b;
+            border-radius: 0 8px 8px 0;
+            line-height: 1.6;
+            font-weight: bold;
+        }
 
         /* 信頼のトライアングル */
         .triangle-container { position: relative; width: 100%; max-width: 550px; margin: 40px auto; padding: 20px 0; min-height: 380px; }
@@ -35,16 +83,14 @@
         behold-widget { display: block; width: 100%; }
         .insta-btn { display: inline-block; background: linear-gradient(45deg, #f09433 0%, #e73323 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 20px; font-size: 0.9rem; }
 
-        /* リンクボタン */
+        /* 🛒 リンクボタン群（スマホ対応2列＋1列レイアウト） */
         .btn-group { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 40px 0; }
-        .btn { padding: 18px 20px; text-decoration: none; color: #fff; border-radius: 10px; font-weight: bold; flex: 1; min-width: 250px; transition: 0.3s; font-size: 1rem; text-align: center; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
-        .btn-goobike { background-color: #0055aa; }
-        .btn-carsensor { background-color: #ff6600; }
+        .btn { padding: 18px 15px; text-decoration: none; color: #fff; border-radius: 10px; font-weight: bold; flex: 1 1 calc(50% - 12px); min-width: 140px; transition: 0.3s; font-size: 0.95rem; text-align: center; box-shadow: 0 5px 10px rgba(0,0,0,0.1); box-sizing: border-box; display: flex; align-items: center; justify-content: center; }
         .btn-bikesensor { background-color: #222; }
         .btn-yahoo { background-color: #ffcc00; color: #000; }
-        .btn-youtube { background-color: #ff0000; }
+        .btn-youtube { background-color: #ff0000; flex: 1 1 100%; font-size: 1.1rem; padding: 20px; } /* YouTubeは横幅いっぱい */
 
-        /* 工賃表セクション（特注デザイン） */
+        /* 工賃表セクション */
         .price-section { margin: 60px 0; }
         .price-section h3 { text-align: center; color: #1e293b; margin-bottom: 10px; font-size: 1.5rem; }
         .price-sub { text-align: center; font-size: 0.85rem; color: #ef4444; margin-bottom: 25px; font-weight: bold; }
@@ -56,14 +102,54 @@
         .price-tag { background: #dcfce7; color: #166534; padding: 4px 10px; border-radius: 20px; font-weight: bold; font-size: 0.85rem; white-space: nowrap; }
         .price-memo { font-size: 0.75rem; color: #64748b; display: block; margin-top: 4px; line-height: 1.3; }
 
-        /* フォーム */
-        .form-section { background: #f8fafc; padding: 35px 25px; border-radius: 15px; margin-top: 50px; text-align: left; border: 1px solid #e2e8f0; }
-        .form-section h3 { text-align: center; color: #0f172a; font-size: 1.4rem; }
-        .form-disclaimer { font-size: 0.85rem; color: #ef4444; margin-bottom: 25px; text-align: center; font-weight: bold; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; font-weight: bold; margin-bottom: 8px; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px; border: 1px solid #cbd5e1; border-radius: 8px; box-sizing: border-box; }
-        .submit-btn { background: #10b981; color: #fff; border: none; padding: 20px; width: 100%; border-radius: 10px; font-size: 1.2rem; font-weight: bold; cursor: pointer; }
+        /* 💬 LINE一本化 お問い合わせセクション */
+        .line-section { background: #f8fafc; padding: 35px 20px; border-radius: 15px; margin-top: 50px; text-align: center; border: 1px solid #e2e8f0; }
+        .line-section h3 { color: #0f172a; font-size: 1.4rem; margin-top: 0; }
+        .line-section p { font-size: 0.95rem; color: #475569; margin-bottom: 20px; }
+        .btn-line-large {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #06C755;
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: bold;
+            padding: 20px 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            box-shadow: 0 6px 15px rgba(6, 199, 85, 0.3);
+            transition: transform 0.2s, background-color 0.2s;
+            width: 100%;
+            max-width: 450px;
+            box-sizing: border-box;
+        }
+        .btn-line-large:hover {
+            background-color: #05b34c;
+            transform: translateY(-2px);
+        }
+        .line-url-box {
+            margin-top: 15px;
+            background: #e2e8f0;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            word-break: break-all;
+            color: #334155;
+            font-weight: bold;
+        }
+        .line-disclaimer {
+            margin-top: 25px;
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: left;
+            font-size: 0.85rem;
+            color: #dc2626;
+            line-height: 1.6;
+            font-weight: bold;
+        }
 
         /* アクセスカウンター */
         .counter-section { margin: 60px 0 20px; padding: 30px 10px; background: #1e293b; border-radius: 15px; color: #fff; text-align: center; }
@@ -85,9 +171,28 @@
 </header>
 
 <div class="container">
+
+    <!-- 📢 店舗移転・緊急お知らせバナー -->
+    <div class="news-banner">
+        <h3>📢 店舗移転に伴う準備期間（10月1日〜）のお知らせ</h3>
+        <p>いつもCOLORSをご利用いただき誠にありがとうございます！<br>この度、COLORSはお客様サービス向上のため、<b>埼玉県深谷市へ移転</b>することになりました！</p>
+        
+        <div class="news-info-list">
+            <div>🗓 <b>移転準備期間：</b> 2026年10月1日(木) 〜</div>
+            <div>🎉 <b>リニューアルオープン予定：</b> 10月中旬〜下旬頃</div>
+            <div>📍 <b>新店舗住所：</b> 埼玉県深谷市新井834</div>
+        </div>
+
+        <div class="news-notice">
+            ⚠️ <b>【既存のお客様へお願い】</b><br>
+            10月1日からの移転準備期間中は、現在の美里店舗は荷物の移動作業や新店舗準備のため、<b>スタッフが不在になる時間帯が多くなります。</b><br>
+            ご来店や整備のご相談の際は、すれ違いを防ぐため、<b>必ず事前に公式LINEよりご連絡のうえ</b>お越しいただけますようご協力をお願いいたします。
+        </div>
+    </div>
+
     <div class="intro-section">
         <h2>20年の技術と提案。理想の相棒を、ここで。</h2>
-        <p style="text-align: left; color: #475569; font-size: 0.95rem;">埼玉県児玉郡美里町で車・バイクの販売を行っている「COLORS」です。業界20年のキャリアを積んできた熟練の整備士が、一台一台に魂を込めて向き合っています。</p>
+        <p style="text-align: left; color: #475569; font-size: 0.95rem;">車・バイクの販売・整備を行っている「COLORS」です。業界20年のキャリアを積んできた熟練の整備士が、一台一台に魂を込めて向き合っています。</p>
     </div>
 
     <div class="triangle-container">
@@ -188,8 +293,6 @@
 
     <h3>🛒 在庫車両・部品・動画</h3>
     <div class="btn-group">
-        <a href="https://www.goobike.com/shop/client_8540007/zaiko.html" target="_blank" class="btn btn-goobike">GooBike 在庫一覧</a>
-        <a href="https://www.carsensor.net/shop/saitama/330303001/stocklist/" target="_blank" class="btn btn-carsensor">カーセンサー 在庫一覧</a>
         <a href="https://www.bds-bikesensor.net/bike?shopCode=53427" target="_blank" class="btn btn-bikesensor">バイクセンサー 在庫一覧</a>
         <a href="https://auctions.yahoo.co.jp/seller/23sGncMA3TvnWeFnJSYMuukXEJKi2?user_type=c" target="_blank" class="btn btn-yahoo">ヤフオク 車輌出品一覧</a>
         <a href="https://auctions.yahoo.co.jp/seller/8a5dywwf7jCGbR621obDG7CPjaHy1?user_type=c" target="_blank" class="btn btn-yahoo">ヤフオク 部品1</a>
@@ -199,26 +302,27 @@
 
     <hr>
 
-    <div class="form-section">
-        <h3>💰 査定依頼・お問い合わせ</h3>
-        <p class="form-disclaimer">査定に関してはお客様のお住まいの地域によってはおおよそのお値段のみでのご対応の場合もございます、予めご了承ください。</p>
-        <form action="https://formsubmit.co/842e9685167f81a3eefe6204045427df" method="POST">
-            <input type="hidden" name="_next" value="https://bike-dealer-colors.github.io/COLORS-OFFICIAL/">
-            <input type="hidden" name="_captcha" value="false">
-            <div class="form-group"><label>お名前</label><input type="text" name="お名前" required></div>
-            <div class="form-group"><label>お電話番号</label><input type="tel" name="電話番号" required></div>
-            <div class="form-group">
-                <label>区分</label>
-                <select name="区分">
-                    <option value="バイク査定">バイク査定を依頼</option>
-                    <option value="車査定">車査定を依頼</option>
-                    <option value="お問い合わせ">その他お問い合わせ</option>
-                </select>
-            </div>
-            <div class="form-group"><label>車種 / 年式 / 距離</label><input type="text" name="車両情報" required></div>
-            <div class="form-group"><label>メッセージ内容</label><textarea name="内容" rows="4"></textarea></div>
-            <button type="submit" class="submit-btn">この内容で送信する</button>
-        </form>
+    <!-- 💬 LINE一本化 お問い合わせセクション -->
+    <div class="line-section">
+        <h3>💰 査定依頼・各種お問い合わせ</h3>
+        <p>お見積もり・買取査定・整備のご相談・ご来店予約は、<br>COLORS公式LINEより24時間受け付けております！</p>
+        
+        <!-- スマホでタップするとLINEアプリが直で起動 -->
+        <a href="https://line.me/ti/p/MZwRFmktQC" target="_blank" class="btn-line-large">
+            💬 COLORS 公式LINEでお問い合わせ
+        </a>
+
+        <!-- PC閲覧用・直書きURL案内 -->
+        <div class="line-url-box">
+            🔗 LINE URL: <a href="https://line.me/ti/p/MZwRFmktQC" target="_blank" style="color: #0284c7; text-decoration: underline;">https://line.me/ti/p/MZwRFmktQC</a><br>
+            <span style="font-size:0.75rem; color:#64748b; font-weight:normal;">※PCでご覧の方は、上記リンクをクリックして表示されるQRコードをスマホで読み取ってください。</span>
+        </div>
+
+        <div class="line-disclaimer">
+            ⚠️ <b>お問い合わせ時のご注意事項</b><br>
+            ・<b>LINEでの音声通話には対応しておりません。</b>メッセージ（テキスト）にてお問い合わせください。<br>
+            ・<b>ご返信は、メッセージをいただいた日から翌々日までに返信になります。</b>作業等でお時間をいただく場合がございますが、あらかじめご了承ください。
+        </div>
     </div>
 
     <div class="counter-section">
@@ -231,22 +335,22 @@
 
     <div class="access-section">
         <h3>📍 Access & Contact</h3>
-        <p><strong>住所：</strong> 埼玉県児玉郡美里町小茂田８９１－１</p>
-        <a href="https://www.google.com/maps/search/?api=1&query=埼玉県児玉郡美里町小茂田891-1" target="_blank" style="color: #60a5fa; font-weight: bold; text-decoration: none;">＞ Googleマップでルート案内</a>
-        <br><br>
+        <p><strong>新店舗住所：</strong> 埼玉県深谷市新井８３４</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=埼玉県深谷市新井834" target="_blank" style="color: #60a5fa; font-weight: bold; text-decoration: none;">＞ Googleマップでルート案内</a>
+        <p style="font-size: 0.85rem; color: #cbd5e1; margin-top: 10px;">※10月中旬オープンまでは移転準備中のため、ご来店の際は事前に必ず公式LINEよりご連絡をお願いいたします。</p>
+        <br>
         <p><strong>電話番号：</strong></p>
         <a href="tel:0495716259" class="tel-link">0495-71-6259</a>
     </div>
 </div>
 
 <footer>
-    <p>COLORS - 埼玉県児玉郡美里町</p>
+    <p>COLORS - 埼玉県深谷市</p>
     © 2026 COLORS. All Rights Reserved.
 </footer>
 
 <script>
     async function updateCounter() {
-        // 💡店長！ここにさっきコピーしたGASの「ウェブアプリURL」をバシッと貼り付けてくれ！
         const GAS_URL = 'https://script.google.com/macros/s/AKfycbxVqzv4w5tr0R8QcrN9hET5UOj65-7j-6R40U1FiQWWxtjx-R9HfNxXjHvoLPg2cudT/exec'; 
         
         if (GAS_URL === 'ここにコピーしたURLを貼る') {
@@ -256,16 +360,13 @@
             return;
         }
 
-        // 日本時間の今日の日付（YYYY-MM-DD）を作成してスタンプにする
         const now = new Date();
         const jstDate = new Intl.DateTimeFormat('ja-JP', { timeZone: 'Asia/Tokyo', year: 'numeric', month: '2-digit', day: '2-digit' }).format(now).replace(/\//g, '-');
         
-        // localStorageをチェックして同日重複アクセスを判定
         const lastVisit = localStorage.getItem('colors_counter_visit');
-        let action = 'get'; // 基本は数字を読み込むだけ（F5連打対策）
+        let action = 'get';
         
         if (lastVisit !== jstDate) {
-          // 今日初めてこの端末（スマホ・PC）から開いた場合だけカウントを増やす
           action = 'hit';
           localStorage.setItem('colors_counter_visit', jstDate);
         }
